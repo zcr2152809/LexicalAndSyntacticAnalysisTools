@@ -1,0 +1,12 @@
+10 5 
+a   b   #   S   B
+s3  s4  no  1   2
+no  no  acc no  no
+s6  s7  no  no  5
+s3  s4  no  no  8
+r3  r3  no  no  no
+no  no  r1  no  no
+s6  s7  no  no  9
+no  no  r3  no  no
+r2  r2  no  no  no
+no  no  r2  no  no

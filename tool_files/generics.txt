@@ -1,0 +1,5 @@
+4
+S' -> S end2326
+S -> B B end2326
+B -> a B end2326
+B -> b end2326

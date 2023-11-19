@@ -139,9 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="grammer_analysis.h" />
     <ClInclude Include="interfaces.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="grammer_analysis.cpp" />
     <ClCompile Include="interfaces.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

@@ -1,2 +1,5 @@
-﻿  main.cpp
+﻿  grammer_analysis.cpp
+D:\编译原理\大作业1\big_homework_jing\compilation_principle_bighomework1_jing\compilation_principle_bighomework1_jing\grammer_analysis.cpp(91,2): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\编译原理\大作业1\big_homework_jing\compilation_principle_bighomework1_jing\compilation_principle_bighomework1_jing\grammer_analysis.cpp(123,98): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\编译原理\大作业1\big_homework_jing\compilation_principle_bighomework1_jing\compilation_principle_bighomework1_jing\grammer_analysis.cpp(175,3): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
   compilation_principle_bighomework1_jing.vcxproj -> D:\编译原理\大作业1\big_homework_jing\compilation_principle_bighomework1_jing\x64\Debug\compilation_principle_bighomework1_jing.exe
