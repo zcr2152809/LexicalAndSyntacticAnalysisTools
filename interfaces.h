@@ -24,10 +24,11 @@ using namespace std;
 class WordTypeCorrespondenceTable {
 public:
 	WordTypeCorrespondenceTable() {};//默认构造
-	WordTypeCorrespondenceTable(string wordLabelFileName);//根据文件进行构造
+	WordTypeCorrespondenceTable(string wordLabelFileName, bool isAll);//根据文件进行构造，只构造终结符或者全构造
 	void insertOneRelation(string word, int type);//插入一个对应关系
 	int getWordType(string word);//根据单词获取类型值
 	string getWord(int type);//根据类型值获取单词
+	int getWordLabelSize();//获取单词种类的数量
 
 private:
 	map<string, int> wordLabelForward;//正向映射
@@ -37,7 +38,7 @@ private:
 
 /*可识别词结构体*/
 struct Token {
-	int type;
+	int type = 0;
 	string value;
 };
 
@@ -68,7 +69,7 @@ private:
 
 /*产生式结构体*/
 struct Generic {
-	int left;
+	int left = 0;
 	vector<int> right;
 };
 
@@ -80,6 +81,7 @@ public:
 	void addOneGeneric(Generic generic);//向产生式中添加一项
 	Generic findGeneric(int genericId);//根据产生式编号找出对应的产生式
 	vector<Generic> getGenerics();//获取产生式
+	int getGenericsNum();//获取产生式的数量
 
 private:
 	vector<Generic> generics;//存储的产生式集

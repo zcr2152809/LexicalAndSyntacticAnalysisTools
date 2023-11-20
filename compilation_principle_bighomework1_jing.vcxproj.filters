@@ -21,6 +21,9 @@
     <ClInclude Include="grammer_analysis.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="gen_analysis_tool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="interfaces.cpp">
@@ -30,6 +33,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="grammer_analysis.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="gen_analysis_tool.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

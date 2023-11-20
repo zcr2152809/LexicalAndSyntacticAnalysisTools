@@ -52,7 +52,7 @@ void AnalysisTreeNode::genDotFile(ofstream& dotFileOut, WordTypeCorrespondenceTa
 /*GrammerAnalysis方法实现*/
 GrammerAnalysis::GrammerAnalysis(string wordLabelFileName, string lexResultFileName, string analysisTableFileName, string genericsFileName) {
 	//初始化wordLabel
-	this->wordLabel = new WordTypeCorrespondenceTable(wordLabelFileName);
+	this->wordLabel = new WordTypeCorrespondenceTable(wordLabelFileName, true);
 
 	//初始化lexcalResult
 	this->lexcalResult = new LexcalResult(lexResultFileName);

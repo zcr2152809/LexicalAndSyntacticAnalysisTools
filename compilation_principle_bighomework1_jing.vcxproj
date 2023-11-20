@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="gen_analysis_tool.h" />
     <ClInclude Include="grammer_analysis.h" />
     <ClInclude Include="interfaces.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="gen_analysis_tool.cpp" />
     <ClCompile Include="grammer_analysis.cpp" />
     <ClCompile Include="interfaces.cpp" />
     <ClCompile Include="main.cpp" />

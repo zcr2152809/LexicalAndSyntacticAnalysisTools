@@ -1,0 +1,62 @@
+@Nonterminal
+S Program DecList Dec DecType DecFun DecVar FormalPara StmtBlock ParaList Para InternalDec StmtList InternalVarDec Stmt StmtIf StmtWhile StmtReturn StmtAssign Expression ExpressionAdd Relop Term Factor FTYPE Call Argument ArgumentList
+@end
+
+@Generics
+S ::= Program jing033
+Program ::= DecList jing033
+DecList ::= Dec jing033
+DecList ::= DecList Dec jing033
+Dec ::= int signword DecType jing033
+Dec ::= void signword DecFun jing033
+DecType ::= DecVar jing033
+DecType ::= DecFun jing033
+DecVar ::= ; jing033
+DecFun ::= ( FormalPara ) StmtBlock jing033
+FormalPara ::= ParaList jing033
+FormalPara ::= jing033
+ParaList ::= Para jing033
+ParaList ::= ParaList , Para jing033
+Para ::= int signword jing033
+StmtBlock ::= { InternalDec StmtList } jing033
+InternalDec ::= jing033
+InternalDec ::= InternalDec InternalVarDec ; jing033
+InternalDec ::= int signword jing033
+StmtList ::= Stmt jing033
+StmtList ::= StmtList Stmt jing033
+Stmt ::= StmtIf jing033
+Stmt ::= StmtWhile jing033
+Stmt ::= StmtReturn jing033
+Stmt ::= StmtAssign jing033
+StmtAssign ::= signword  = Expression ; jing033
+StmtReturn ::= return ; jing033
+StmtReturn ::= return Expression ; jing033
+StmtWhile ::= while ( Expression ) StmtBlock jing033
+StmtIf ::= if ( Expression ) StmtBlock jing033
+StmtIf ::= if ( Expression ) StmtBlock else StmtBlock jing033
+Expression ::= ExpressionAdd jing033
+Expression ::= Expression Relop ExpessionAdd jing033
+Relop ::= < jing033
+Relop ::= <= jing033
+Relop ::= > jing033
+Relop ::= >= jing033
+Relop ::= == jing033
+Relop ::= != jing033
+ExpressionAdd ::= Term jing033
+ExpressionAdd ::= ExpressionAdd + Term jing033
+ExpressionAdd ::= ExpressionAdd - Term jing033
+Term ::= Factor jing033
+Term ::= Term * Factor jing033
+Term ::= Term / Factor jing033
+Factor ::= integer jing033
+Factor ::= ( Expression ) jing033
+Factor ::= signword FTYPE jing033
+FTYPE ::= Call jing033
+FTYPE ::= jing033
+Call ::= ( Argument ) jing033
+Argument ::= ArgumentList jing033
+Argument ::= jing033
+ArgumentList ::= Expression jing033
+ArgumentList ::= ArgumentList , Expression jing033
+@end
+

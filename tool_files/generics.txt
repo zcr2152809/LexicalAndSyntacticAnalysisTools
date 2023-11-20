@@ -1,5 +1,10 @@
-4
-S' -> S end2326
-S -> B B end2326
-B -> a B end2326
-B -> b end2326
+9
+S -> E end2326
+E -> T E' end2326
+E' -> + T E' end2326
+E' -> end2326
+T -> F T' end2326
+T' -> * F T' end2326
+T' -> end2326
+F -> ( E ) end2326
+F -> i end2326

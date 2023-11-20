@@ -1,14 +1,22 @@
 #include "interfaces.h"
 
 /*WordTypeCorrespondenceTable方法实现*/
-WordTypeCorrespondenceTable::WordTypeCorrespondenceTable(string wordLabelFileName) {
+WordTypeCorrespondenceTable::WordTypeCorrespondenceTable(string wordLabelFileName, bool isAll) {
 	ifstream wordLabelIn;
-	wordLabelIn.open("./tool_files/" + wordLabelFileName, ios::in);
+	if (isAll) {
+		wordLabelIn.open("./tool_files/" + wordLabelFileName, ios::in);
+	}
+	else {
+		wordLabelIn.open("./input_files/" + wordLabelFileName, ios::in);
+	}
+	
 	if (!wordLabelIn) {
 		cout << "can't open file!" << endl;
 		exit(-1);
 	}
-	while (!wordLabelIn.eof()) {
+	int num;
+	wordLabelIn >> num;
+	for (int i = 0; i < num; i++) {
 		string value;
 		int type;
 		wordLabelIn >> value;
@@ -32,6 +40,10 @@ string WordTypeCorrespondenceTable::getWord(int type) {
 	return this->wordLabelReverse[type];
 }
 
+int WordTypeCorrespondenceTable::getWordLabelSize() {
+	return this->wordLabelForward.size();
+}
+
 /*LexcalResult方法实现*/
 LexcalResult::LexcalResult(string lexResultFileName) {
 	ifstream lexResultIn;
@@ -40,7 +52,9 @@ LexcalResult::LexcalResult(string lexResultFileName) {
 		cout << "can't open file!" << endl;
 		exit(-1);
 	}
-	while (!lexResultIn.eof()) {
+	int num;
+	lexResultIn >> num;
+	for (int i = 0; i < num; i++) {
 		Token token;
 		lexResultIn >> token.type;
 		lexResultIn >> token.value;
@@ -167,3 +181,6 @@ vector<Generic> Generics::getGenerics() {
 	return this->generics;
 }
 
+int Generics::getGenericsNum() {
+	return this->generics.size();
+}

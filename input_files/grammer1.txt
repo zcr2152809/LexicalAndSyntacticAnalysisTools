@@ -1,0 +1,15 @@
+@Nonterminal
+S E E' T T' F
+@end
+
+@Generics
+S ::= E jing033
+E ::= T E' jing033
+E' ::= + T E' jing033
+E' ::= jing033
+T ::= F T' jing033
+T' ::= * F T' jing033
+T' ::= jing033
+F ::= ( E ) jing033
+F ::= i jing033
+@end
